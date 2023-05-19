@@ -20,6 +20,7 @@ class _02_SwappingDigitsTest {
         int[] q = {2, 3, 5, 7, 9};
         _02_SwappingDigits.sortIntArray(z);
         assertArrayEquals(q, z);
+       
     }
     
     @Test
