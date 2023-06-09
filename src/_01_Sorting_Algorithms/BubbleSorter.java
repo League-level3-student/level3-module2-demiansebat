@@ -29,8 +29,9 @@ public class BubbleSorter extends Sorter{
  
             // If no two elements were
             // swapped by inner loop, then break
-            if (swapped == false)
+            if (swapped == false) {
                 break;
         }
     }
+}
 }
