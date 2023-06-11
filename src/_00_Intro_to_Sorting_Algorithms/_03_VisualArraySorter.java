@@ -49,11 +49,15 @@ public class _03_VisualArraySorter extends PApplet {
 
     @Override
     public void setup() {
-       int[] arr= new int[50];
-       for (int i = 0; i < arr.length; i++) {
-		arr[i]= (int)random(height);
-	}
+       arr= new int[50];
+       random();
        noStroke();
+    }
+    public void random() {
+    	  for (int i = 0; i < arr.length; i++) {
+    			arr[i]= (int)random(height);
+    		}
+    	 
     }
 
     @Override
@@ -61,14 +65,18 @@ public class _03_VisualArraySorter extends PApplet {
     	background(100, 100, 100);
     	fill(200,200,200);
     	for (int i = 0; i < arr.length; i++) {
-    		rect(width/arr.length,HEIGHT,width/arr.length,-arr[i]);
+    		rect(i*width/arr.length,HEIGHT,width/arr.length,-arr[i]);
 		}
     	stepSort(arr);
+    	 if(mousePressed==true) {
+   		  random();
+   	  }
     	
     }
 
     static public void main(String[] passedArgs) {
         PApplet.main(_03_VisualArraySorter.class.getName());
+        
     }
     
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/
