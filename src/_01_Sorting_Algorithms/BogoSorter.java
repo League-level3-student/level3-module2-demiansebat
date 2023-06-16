@@ -20,19 +20,28 @@ public class BogoSorter extends Sorter {
      */
     @Override
     void sort(int[] arr, SortingVisualizer display) {
-        boolean inorder;
+        boolean inorder=true;
         int n = arr.length;
-    	for (int i = 0; i < n - 1; i++) {
-			for (int k = 0; k < n - i - 1; k++) {
-				if (arr[k] > arr[k + 1]) {
+	Random a= new Random(arr.length);
+	int z=a.nextInt();
+	Random b= new Random(arr.length);
+	int x=b.nextInt();
+			for (int i = 0; i < n-1; i++) {
+				if (arr[i] > arr[i + 1]) {
 				inorder=false;
 				}
-				else{
-					inorder=true;
-				}
-				if(inorder==false) {
-					
-				}
 			}
+    	
+    	if(inorder==false) {
+			arr[z] = arr[x];
+    	}
+    	if(inorder=false) {
+    		//need to complete step 3
+    	}
+    	if(inorder=true){
+    		break;
+    	}
+    	}
+    	
     }
-}}
+
