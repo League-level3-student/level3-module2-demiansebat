@@ -36,7 +36,10 @@ public class ThanosSorter extends Sorter {
 	 * randomly until half (in this case (n-1)/2) remain. The algorithm is up to
 	 * you!
 	 */
+	int a=0;
+	//int b=; need to create a second method which sort uses
 	@Override
+	
 	void sort(int[] arr, SortingVisualizer display) {
 		boolean inorder = true;
 		int n = arr.length;
@@ -45,12 +48,14 @@ public class ThanosSorter extends Sorter {
 				inorder = false;
 			}
 		}
-		if(inorder=false) {
-			for (int i = 0; i < arr.length/2; i++) {
+		if(inorder==false) {
+		
+			for (int i = a; i < b; i++) {
 				arr[i]=0;
 				display.updateDisplay();
-				sort(arr,display);
-			}
+					}
 		}
+	
+		sort(arr,display);
 	}
 }
