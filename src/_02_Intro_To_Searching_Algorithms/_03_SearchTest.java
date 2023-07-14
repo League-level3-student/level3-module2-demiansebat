@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import _00_Intro_to_Sorting_Algorithms._02_SwappingDigits;
+
 class _03_SearchTest {
 
     /*
@@ -13,7 +15,9 @@ class _03_SearchTest {
     @Test
     public void testLinearSearch() {
         // 1. Use the assertEquals() method to test your linear search method
-        assertEquals(false, true);
+        String[] x = {"one", "two", "three", "four", "five", "six"};
+        
+        assertEquals(5, _01_LinearSearch.linearSearch(x,"five"));
     }
 
     @Test
