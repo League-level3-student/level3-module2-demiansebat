@@ -2,7 +2,7 @@ package _00_Intro_to_Sorting_Algorithms;
 
 import java.util.Iterator;
 
-class _02_SwappingDigits {
+public class _02_SwappingDigits {
 
 	// 1. Complete the method so that the first two elements of the array are
 	// swapped.

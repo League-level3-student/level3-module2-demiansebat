@@ -15,15 +15,21 @@ class _03_SearchTest {
     @Test
     public void testLinearSearch() {
         // 1. Use the assertEquals() method to test your linear search method
-        String[] x = {"one", "two", "three", "four", "five", "six"};
+        String[] x = {"one", "two", "three", "four", "five", "six"}; 
+        assertEquals(5, _01_LinearSearch.linearSearch(x,"six"));
         
-        assertEquals(5, _01_LinearSearch.linearSearch(x,"five"));
+        String[] y = {"a", "b", "c", "d", "e", "f"}; 
+        assertEquals(5, _01_LinearSearch.linearSearch(y,"f"));
+        
+        String[] z = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen"}; 
+        assertEquals(5, _01_LinearSearch.linearSearch(z,"fifteen"));
     }
 
     @Test
     public void testBinarySearch() {
         // 2. Use the assertEquals() method to test your binary search method
         //    remember that the array must be sorted
+    	int[] x= {1,2,3,4,5,6,7,8,9,10};
         assertEquals(false, true);
     }
 }
