@@ -30,6 +30,6 @@ class _03_SearchTest {
         // 2. Use the assertEquals() method to test your binary search method
         //    remember that the array must be sorted
     	int[] x= {1,2,3,4,5,6,7,8,9,10};
-        assertEquals(false, true);
+        assertEquals(5,_02_BinarySearch.binarySearch(x,1,10,6));
     }
 }
