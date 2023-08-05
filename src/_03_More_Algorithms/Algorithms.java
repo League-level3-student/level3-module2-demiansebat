@@ -41,13 +41,20 @@ for (double height:peeps) {
 }
 return tallest;
 }
+	
 
 	public static Object findLongestWord(List<String> words) {
-		for (int i = 0; i < words.size(); i++) {
-			int longest= words.get(i).length();
+		String longer="";
+		int longest = 0;
+		for (int i = 0; i < words.size()-1; i++) {
+			 longest= words.get(i).length();
 			if(longest<words.get(i+1).length()) {
 				longest=words.get(i+1).length();
-				String longer=words.get(i+1);
+			}
+		}
+		for (int i = 0; i < words.size(); i++) {
+			if(words.get(i).length()==longest) {
+				longer=words.get(i);
 			}
 		}
 		return longer;
