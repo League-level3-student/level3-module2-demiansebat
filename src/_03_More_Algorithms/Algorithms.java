@@ -47,18 +47,30 @@ return tallest;
 	public static Object findLongestWord(List<String> words) {
 		String longer="";
 		int longest = 0;
-		for (int i = 0; i < words.size()-1; i++) {
-			 longest= words.get(i).length();
-			if(longest<words.get(i+1).length()) {
-				longest=words.get(i+1).length();
-			}
-		}
 		for (int i = 0; i < words.size(); i++) {
-			if(words.get(i).length()==longest) {
+			if(longest<words.get(i).length()) {
+				longest=words.get(i).length();
 				longer=words.get(i);
 			}
+			System.out.println(longest);
 		}
 		return longer;
+	}
+
+	public static Object containsSOS(List<String>message) {
+	for (int i = 0; i < message.size(); i++) {
+		if(message.get(i).contains("... --- ...")) {
+			return true;
+		}
+	}
+		return false;
+	}
+
+	public static List<String> sortScores(List<Double> results) {
+		for (int i = 0; i < results.size(); i++) {
+			 
+		}
+		return null;
 	}
 
 	
