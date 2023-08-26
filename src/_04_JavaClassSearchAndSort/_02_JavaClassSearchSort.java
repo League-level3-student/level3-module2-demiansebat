@@ -21,13 +21,26 @@ public class _02_JavaClassSearchSort {
     }
 
     public static Boolean arraySearch(char[] arr, char key) {
-        //need to finish two searches using maybe collections?
-    	Collections.binarySearch(arr, key);
-        return null;
+    	Arrays.sort(arr);
+    	int index=Arrays.binarySearch(arr, key);
+    	System.out.println(index);
+    	if (index<0) {
+			return false;
+		}
+    	else {
+    		return true;
+    	}
+
     }
     
     public static Boolean listSearch(List<Character> list, Character key) {
-        
-        return null;
+        Collections.sort(list);
+        int index= Collections.binarySearch(list, key);
+        if (index<0) {
+			return false;
+		}
+    	else {
+    		return true;
+    	}
     }
 }
